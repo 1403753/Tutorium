@@ -1,0 +1,111 @@
+======================================================================
+  NR. 1                    HOMEWORK SUMMARY          MatNr: a01950505
+======================================================================
+
+ -> REPORT CHECK: PDF file found (mislabeled report?)
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'accuracy.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - accuracy.m: ok
+
+    - final results:
+
+      'lu-decomposition': 
+      - residual (R):                8e-15
+      - reference residual:          8e-15
+      - 'plu.m' runtime:             0.369925 s
+
+ -> ROUTINE EVALUATION: ok
+
+
+part 2:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'accuracy.m' .. ok
+    - try 'solveL.m' .. ok
+    - try 'solveU.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - 'accuracy.m': ok
+    - 'solveL.m': ok
+    - 'solveU.m': ok
+
+    - final results:
+
+      'lower triangular solve':
+      - residual (r):                5e-16
+        - reference residual:        5e-16
+      - fwd error (f):               4e-14
+        - reference fwd error:       4e-14
+
+      'upper triangular solve':
+      - residual (r):                4e-16
+        - reference residual:        4e-16
+      - fwd error (f):               6e-14
+        - reference fwd error:       6e-14
+
+ -> ROUTINE EVALUATION: ok
+
+
+part 3:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'linSolve.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - 'linSolve.m': ok
+
+    - final results:
+
+      'linear solve':
+      - residual (r):                6e-16
+        - reference residual:        6e-16
+      - fwd error (f):               2e-12
+        - reference fwd error:       2e-12
+
+ -> ROUTINE EVALUATION: ok
+
+

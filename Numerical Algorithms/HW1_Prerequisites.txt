@@ -1,0 +1,34 @@
+Prerequisites for the HW1 programming exercise:
+
+Prerequisites:
+  Basics:
+		- No global variables allowed.
+		(- Produce separate routines (i.\,e., for Part I: preparation of the input matrices, $LU$ decomposition). Write modular code! Use consistent interfaces for your routines.)
+		- Pay attention to the interface definitions (i.e., use the specified terms! In/output parameters must be in the specified order!)
+		- Do not plot results in predefined functions! Plot results only in scripts or self defined routines.
+		
+	Submission:		
+		- Upload a single a_<matriculation number>.zip archive with all your source code files and your report (as a single
+			PDF file named 'report.pdf' with all plots and discussions of results) on the course page in Moodle.
+		- Subdirectories are not allowed.
+		
+		- a complete submission should include the following files:
+
+		|- report.pdf
+		|- accuracy.m
+		|- linSolve.m
+		|- part1.m
+		|- part2.m
+		|- part3.m
+		|- plu.m
+		|- solveL.m
+		|- solveU.m
+		... (other files)
+		
+		
+		
+		\item Write a routine $linSolveAcc.m$ of the following form:
+			\begin{align*}
+				\texttt{[r, f] = linSolveAcc(M, b, n, tx)}
+			\end{align*}		       
+		This routine takes in the same parameters as $linSolve.m$ and additionally the true solution $tx$. It incorporates the $linSolve.m$ and $accuracy.m$ routines in order to compute and return the relative residual $r$ and the forward error $f$.

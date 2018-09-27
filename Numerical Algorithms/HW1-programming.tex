@@ -1,0 +1,205 @@
+%\documentclass{article}
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{xcolor}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Note Block - source: https://tex.stackexchange.com/questions/94464/note-environment-with-mdframed
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[framemethod=default]{mdframed}
+
+%\global\mdfdefinestyle{exampledefault}{%
+%linecolor=lightgray,linewidth=1pt,%
+%leftmargin=0cm,rightmargin=0cm,
+%}
+
+\newcommand{\fl}{\text{fl}}
+\newcommand{\op}{\text{ op }}
+
+\newenvironment{mymdframed}[1]{%
+\mdfsetup{%
+frametitle={\colorbox{white}{\,#1\,}},
+frametitleaboveskip=-\ht\strutbox,
+frametitlealignment=\raggedright
+}%
+\begin{mdframed}[style=exampledefault]
+}{\end{mdframed}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Homework Sheet 1}
+\subtitle{VU Numerical Algorithms, SoSe 2018}
+\date{\underline{\emph{due date: 23.4.2018, 18:00}}}
+
+\begin{document}
+
+\maketitle
+
+%        \begin{mymdframed}{Submission Guidelines}
+            \begin{itemize}
+                \item Please submit an anonymized version of your report without your name or your Matrikelnummer appearing in the document. 
+            \end{itemize}
+%        \end{mymdframed}
+
+
+\section*{Programming Exercise}
+    The task is to implement an LU factorization-based linear solver in OCTAVE and to evaluate its accuracy for various test matrices. The solver consists of computing the LU decomposition of a square $n \times n$ double precision matrix $A$ such that $A = LU$ with lower triangular $L$ and upper triangular $U$ and subsequent forward and back substitution. In particular:
+        
+    \subsection*{Part I - LU Decomposition (3 points)}
+        First implement the standard "scalar" (unblocked) algorithm (i.e. three nested loops) \textbf{with partial pivoting}.
+        
+        \begin{algorithm}
+            \caption{Pseudo-Code LU Decomposition with partial pivoting}
+            \begin{algorithmic}
+                \FOR {$k=1$ to $n-1$}
+                    \STATE Find index $p$ such that
+                    \STATE $|a_{pk}| \geq |a_{ik}| \; for \; k \leq i \leq n$
+                    \IF {$p \neq k$}
+                        \STATE interchange rows $k$ and $p$
+                    \ENDIF
+                    \IF {$a_{kk} = 0$}
+                        \STATE continue with next $k$
+                    \ENDIF
+                    \FOR {$i=k+1$ to $n$}
+                        \STATE $m_{ik} = a_{ik} / a_{kk}$
+                    \ENDFOR
+                    \FOR {$j=k+1$ to $n$}
+                        \FOR {$i=k+1$ to $n$}
+                            \STATE $a_{ij} = a_{ij} - m_{ik}a_{kj}$
+                        \ENDFOR
+                    \ENDFOR
+                \ENDFOR
+            \end{algorithmic}
+        \end{algorithm}
+    
+%        \begin{mymdframed}{Note}
+            \begin{itemize}
+%                \item Also implement partial pivoting (not shown in the pseudo-code).
+                \item $U$ is contained in the upper triangle (plus diagonal) of $A$, and the diagonal entries of $L$ are all 1. The subdiagonal entries of $L$ are given by the scalars $m_{ik}$ (i.e. $L(i,k) = m_{ik}$). For storage efficiency, we can store $L$ in the lower triangle of $A$, and thus $A(i,k)$ has to be overwritten with $m_{ik}$.
+            \end{itemize}
+%        \end{mymdframed}
+    
+    \subsubsection*{Detailed remarks:}
+    \begin{enumerate}
+        \item Write a routine $plu.m$ of the following form: 
+        	\begin{align*}        	 
+        		\texttt{[A, P] = plu(A, n)}
+			\end{align*}
+        	\begin{itemize}
+            	\item Input: $n \times n$ matrix $A, n$
+            	\item Output: $n \times n$ matrices $L$ and $U$ stored in the array $A$ ($A=LU$) and the permutation matrix $P$.
+        	\end{itemize}           
+    
+        \item \textit{Accuracy}: Verify the correctness of your $LU$ factorization by evaluating the relative residual
+        \begin{align*}
+            R = \frac{\|P^TLU - A\|_{1}}{\|A\|_{1}}
+        \end{align*}
+        where $\|\cdot\|_{1}$ is the maximum absolute column sum of a matrix:
+        \begin{align*}
+            \|M\|_{1} = \underset{j = 1, \dots, n}{max} \; \sum_{i=1}^{n} |M_{ij}|
+        \end{align*}
+
+Write a routine $accuracy.m$ of the following form:
+     	\begin{align*}
+            	\texttt{[z] = accuracy(X, Y)}
+        \end{align*}
+		\begin{itemize}
+            	\item Input: $n \times n$ matrices $X$ and $Y$. In this case $X = P^TLU$ and $Y = A$.
+            	\item Output: scalar $z$ ($z = R$).
+        \end{itemize}
+		
+		\textit{(For Parts II and III, this routine must also work for vectors $X$ and $Y$ of size $n$.)}\\
+		
+		
+
+        Plot these residuals $R$ for all problem sizes you experimented with.
+        \emph{When plotting residuals, always use a \textbf{logarithmic scale} along the \textbf{y-axis}!}
+ 
+        
+        \item Use randomly generated matrices $A$ as input, but please specify clearly in your report how you generated your test matrices!
+      
+
+        \item Write a script \textit{part1.m} to call your routines and plot your results.
+      
+    %    \item \textit{Report}: Summarize your work in a written report, summarizing your measurements and an interpretation of your results.
+        
+        \item What is NOT allowed:
+            \begin{enumerate}
+                \item Do not use any existing code which you did not write yourself!
+                \item Do not try to exploit any special structure in the input data. The code has to be generic and should run for all possible input matrices $A$.
+            \end{enumerate}
+    \end{enumerate}
+    
+    \subsection*{Part II - Solving a Triangular Linear Systems (1 point)}
+        \begin{enumerate}
+            \item \textbf{Forward substitution} solves a given $n \times n$ lower triangular linear system $Lx = b$ for $x$. Write a routine $solveL.m$ of the following form: 
+            \begin{align*}
+            \texttt{[x] = solveL(B, b, n)}
+			\end{align*}
+            \item \textbf{Back substitution}: solves a given $n \times n$ upper triangular linear system $Ux = b$ for $x$. Write a routine $solveU.m$ of the following form: 
+            \begin{align*}
+\texttt{[x] = solveU(B, b, n)}
+			\end{align*}			
+			
+            
+
+The input matrix $B$ has special structure $B = L + U - I$, where $L$ (with fixed ones in the diagonal) and $U$ are (non-singular) randomly generated triangular matrices and $I$ is the Identity. For each solver, determine $b$ such that the exact solution $x$ is a vector of all ones: $x = (1, 1, \dots, 1, 1)^{T}$.
+			\item Evaluate the accuracy of your codes for increasing $n$ in terms of the relative residual and the relative forward error. \emph{(For the definition of relative residual and relative forward error please see Part III!)}
+
+           	\item Write a script \textit{part2.m} to call your routines.
+        \end{enumerate}
+
+    \subsection*{Part III - Numerical Accuracy of LU-Based Linear Solver (4 points)}
+    The main purpose of this part is to experimentally evaluate the numerical accuracy of the linear systems solver you implemented in Parts I and II for different test matrices and to compare it with the built-in solver from OCTAVE. 
+    You can solve a linear system $Ax=b$ for $x$ using the $\setminus$ operator (e.g. $x = A \setminus b$).
+ 
+    \begin{enumerate}
+        \item Take your LU factorization from Part I and combine it with your triangular linear systems solvers from Part II in order to get a complete LU-based linear solver. Therefore, write a routine $linSolve.m$ of the following form: 
+			\begin{align*}
+				\texttt{[x] = linSolve(M, b, n)}
+			\end{align*}
+			\begin{itemize}
+				\item Input: $n \times n$ general matrix $M$, the right hand side vector $b$, and $n$.
+            	\item Output: the solution vector $x$.        	
+        	\end{itemize}
+
+\textit{(This routine must incorporate $\textbf{plu.m}$, $\textbf{solveL.m}$ and $\textbf{solveU.m}$ from previous Parts!)}        
+        \item Input data for your experiments:
+        \begin{enumerate}
+            \item Generate random test matrices $S$ with entries uniformly distributed in the interval [-1,1].
+            \item Generate test matrices $H$ which are defined by
+            \begin{align*}
+                H_{ij} := \frac{1}{i+j-1} \quad for \;i=1,\dots,n \; \mbox{and} \; j=1, \dots, n.
+            \end{align*}
+            \item In all your test cases, determine the corresponding right hand side $b$ of length $n$ such that the exact solution $x$ of the linear system is a vector of all ones: $x = (1, 1, \dots, 1, 1)^{T}$.
+        \end{enumerate}
+        \item Solve the linear systems $Sx = b$ and $Hx=b$ with your LU-based linear solver and the built-in OCTAVE solver and evaluate the numerical accuracy of the computed solution.
+        \begin{enumerate}
+            \item \textit{Problem sizes}: Start with $n=2,3,4,5,\dots,10$ then incease in increments of $5$. For $n > 50$ you can further increase the increment. The largest value of $n$ should be as large as possible (so that your code terminates within a reasonable time).
+            \item \textit{Accuracy}: For the computed solution $\hat{x}$, evaluate the relative residual $r$:
+            \begin{align*}
+                r := \frac{||M\hat{x} - b||_1}{||b||_1}
+            \end{align*}
+            ($M$ is $S$ or $H$)
+            as well as the relative forward error $f$:
+            \begin{align*}
+                f := \frac{||\hat{x} - x||_1}{||x||_1}. 
+            \end{align*}
+Use routine $accuracy.m$ from Part I to compute $r$ and $f$.
+            
+        \end{enumerate}
+
+        \item For both your and the OCTAVE solver generate the following plots for the different test matrices:
+            \begin{enumerate}
+            \item Relative residual and relative forward error in $\hat{x}$ vs. $n$: One figure for both accuracy metrics for matrix type $S$, another figure for both accuracy metrics for matrix type $H$.
+            \end{enumerate}
+
+        \item Write a script \textit{part3.m} to call your routine(s) and plot your results. 
+            
+        \item Interpret and explain your experimental results in your report. Do you think that there is a fundamental difference in the numerical accuracy which your LU-based linear solver achieves for the two types of test matrices? If yes, explain the reasons for this difference. How does your solver compare to the OCTAVE version?
+    \end{enumerate}
+\end{document}

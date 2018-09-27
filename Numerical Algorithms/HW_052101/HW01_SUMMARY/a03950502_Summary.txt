@@ -1,0 +1,103 @@
+======================================================================
+  NR. 3                    HOMEWORK SUMMARY          MatNr: a03950502
+======================================================================
+
+ -> REPORT CHECK: PDF file missing
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+    ! 'part1.m' missing
+
+ -> FILE CHECK: .. file(s) missing .. 
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'accuracy.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - accuracy.m: ok
+
+    - final results:
+
+      'lu-decomposition': 
+      - residual (R):                8e-15
+      - reference residual:          8e-15
+      - 'plu.m' runtime:             0.357269 s
+
+ -> ROUTINE EVALUATION: ok
+
+
+part 2:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'accuracy.m' .. ok
+    - try 'solveL.m' .. ok
+     ! output vector has wrong dimension (dim(x) == 1), n == 5
+    - try 'solveU.m' .. ok
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+    - 'accuracy.m': ok
+    - 'solveU.m': ok
+
+    - final results:
+
+      'lower triangular solve': routines missing/not working
+
+      'upper triangular solve':
+      - residual (r):                4e-16
+        - reference residual:        4e-16
+      - fwd error (f):               6e-14
+        - reference fwd error:       6e-14
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+
+part 3:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    ! 'linSolve.m': dependent routines missing/not working
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+
+    - final results:
+
+      'linear solve': routines missing/not working
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+

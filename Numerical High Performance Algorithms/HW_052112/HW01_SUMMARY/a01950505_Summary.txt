@@ -1,0 +1,39 @@
+======================================================================
+  NR. 1                    HOMEWORK SUMMARY          MatNr: a01950505
+======================================================================
+
+ -> REPORT CHECK: PDF file found (mislabeled report?)
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'pluStats.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - pluStats.m: ok
+
+    - final results:
+
+      'lu-decomposition statistics': 
+      - residual (R):                9e-15
+      - reference residual:          9e-15
+      - runtime:                     0.361501 s
+
+ -> ROUTINE EVALUATION: ok
+
+

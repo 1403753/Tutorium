@@ -1,0 +1,6 @@
+MatNr.;report;part 1;part 2;part 3;Total Submissions: 5;
+a01950505; PDF file found (mislabeled report?);ok;ok;ok;
+a02950502; PDF file missing; .. interface failure .. PLU.M ! output matrix A has wrong dimension ACCURACY.M ! residual is not a scalar ! residual has wrong type; .. evaluation failure .. SOLVEL.M ! dubious result; .. interface failure .. LINSOLVE.M ! dependent routines missing/not working;
+a03950502; PDF file missing; .. file(s) missing ..  ('part1.m') ok; .. interface failure .. SOLVEL.M ! output vector has wrong dimension; .. interface failure .. LINSOLVE.M ! dependent routines missing/not working;
+a04950505;ok;ok;ok; .. evaluation failure .. LINSOLVE.M ! dubious result;
+a04950506; PDF file found (mislabeled report?); .. file(s) missing, sufficient amount of files (wrong label?) ..  'plu.m';ok; .. interface failure .. LINSOLVE.M ! dependent routines missing/not working;

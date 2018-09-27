@@ -1,0 +1,39 @@
+======================================================================
+  NR. 4                    HOMEWORK SUMMARY          MatNr: a04950505
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'pluStats.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - pluStats.m: ok
+
+    - final results:
+
+      'lu-decomposition statistics': 
+      - residual (R):                9e-15
+      - reference residual:          9e-15
+      - runtime:                     0.365539 s
+
+ -> ROUTINE EVALUATION: ok
+
+

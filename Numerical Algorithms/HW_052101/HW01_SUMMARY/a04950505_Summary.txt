@@ -1,0 +1,111 @@
+======================================================================
+  NR. 4                    HOMEWORK SUMMARY          MatNr: a04950505
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'accuracy.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - accuracy.m: ok
+
+    - final results:
+
+      'lu-decomposition': 
+      - residual (R):                8e-15
+      - reference residual:          8e-15
+      - 'plu.m' runtime:             0.371332 s
+
+ -> ROUTINE EVALUATION: ok
+
+
+part 2:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'accuracy.m' .. ok
+    - try 'solveL.m' .. ok
+    - try 'solveU.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - 'accuracy.m': ok
+    - 'solveL.m': ok
+    - 'solveU.m': ok
+
+    - final results:
+
+      'lower triangular solve':
+      - residual (r):                5e-16
+        - reference residual:        5e-16
+      - fwd error (f):               4e-14
+        - reference fwd error:       4e-14
+
+      'upper triangular solve':
+      - residual (r):                4e-16
+        - reference residual:        4e-16
+      - fwd error (f):               6e-14
+        - reference fwd error:       6e-14
+
+ -> ROUTINE EVALUATION: ok
+
+
+part 3:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'linSolve.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    ! 'linSolve.m': dubious result
+      - 'linSolve' output residual:  1e-02
+        - reference residual:        6e-16
+      - 'linSolve' output fwd error: 3e+01
+        - reference fwd error:       2e-12
+
+    - final results:
+
+      'linear solve': routines missing/not working
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+

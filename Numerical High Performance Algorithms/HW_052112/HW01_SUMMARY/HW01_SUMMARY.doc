@@ -1,0 +1,154 @@
+
+*-**-*-**-*-**-*-**-*-**-
+  TOTAL SUBMISSIONS: 4
+*-**-*-**-*-**-*-**-*-**-
+
+======================================================================
+  NR. 1                    HOMEWORK SUMMARY          MatNr: a01950505
+======================================================================
+
+ -> REPORT CHECK: PDF file found (mislabeled report?)
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'pluStats.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - pluStats.m: ok
+
+    - final results:
+
+      'lu-decomposition statistics': 
+      - residual (R):                9e-15
+      - reference residual:          9e-15
+      - runtime:                     0.361501 s
+
+ -> ROUTINE EVALUATION: ok
+
+
+======================================================================
+  NR. 2                    HOMEWORK SUMMARY          MatNr: a02950502
+======================================================================
+
+ -> REPORT CHECK: PDF file found (mislabeled report?)
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+      ! output matrix A has wrong dimension (dim(A) == 1) 
+    - try 'pluStats.m' .. ok
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+    ! 'pluStats.m': dependent routines missing/not working
+
+    - final results:
+
+      Couldn't evaluate 'lu-decomposition statistics' 
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+
+======================================================================
+  NR. 3                    HOMEWORK SUMMARY          MatNr: a03950502
+======================================================================
+
+ -> REPORT CHECK: PDF file missing
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+    ! 'part1.m' missing
+    ! 'plu.m' missing
+    ! 'pluStats.m' missing
+
+ -> FILE CHECK: .. file(s) missing .. 
+
+
+ -> start interface check ..
+
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+
+    - final results:
+
+      Couldn't evaluate 'lu-decomposition statistics' 
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+
+======================================================================
+  NR. 4                    HOMEWORK SUMMARY          MatNr: a04950505
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'pluStats.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - pluStats.m: ok
+
+    - final results:
+
+      'lu-decomposition statistics': 
+      - residual (R):                9e-15
+      - reference residual:          9e-15
+      - runtime:                     0.365539 s
+
+ -> ROUTINE EVALUATION: ok
+
+

@@ -1,0 +1,102 @@
+======================================================================
+  NR. 5                    HOMEWORK SUMMARY          MatNr: a04950506
+======================================================================
+
+ -> REPORT CHECK: PDF file found (mislabeled report?)
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+    ! 'plu.m' missing
+
+ -> FILE CHECK: .. file(s) missing, sufficient amount of files (wrong label?) .. 
+
+
+ -> start interface check ..
+
+    - try 'accuracy.m' .. ok
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+    - accuracy.m: ok
+
+    - final results:
+
+      'lu-decomposition': routines missing/not working
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+
+part 2:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'accuracy.m' .. ok
+    - try 'solveL.m' .. ok
+    - try 'solveU.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - 'accuracy.m': ok
+    - 'solveL.m': ok
+    - 'solveU.m': ok
+
+    - final results:
+
+      'lower triangular solve':
+      - residual (r):                5e-16
+        - reference residual:        5e-16
+      - fwd error (f):               4e-14
+        - reference fwd error:       4e-14
+
+      'upper triangular solve':
+      - residual (r):                4e-16
+        - reference residual:        4e-16
+      - fwd error (f):               6e-14
+        - reference fwd error:       6e-14
+
+ -> ROUTINE EVALUATION: ok
+
+
+part 3:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    ! 'linSolve.m': dependent routines missing/not working
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+
+    - final results:
+
+      'linear solve': routines missing/not working
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+

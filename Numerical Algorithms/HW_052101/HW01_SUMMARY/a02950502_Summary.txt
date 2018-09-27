@@ -1,0 +1,98 @@
+======================================================================
+  NR. 2                    HOMEWORK SUMMARY          MatNr: a02950502
+======================================================================
+
+ -> REPORT CHECK: PDF file missing
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+      ! output matrix A has wrong dimension (dim(A) == 1), n == 5
+    - try 'accuracy.m' .. ok
+      ! residual is not a scalar
+      ! residual has wrong type
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+
+    - final results:
+
+      'lu-decomposition': routines missing/not working
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+
+part 2:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'solveL.m' .. ok
+    - try 'solveU.m' .. ok
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+    ! 'solveL.m': dubious result
+      - 'solveL' output residual:    1e+01
+        - reference residual:        5e-16
+      - 'solveL' output fwd error:   3e+01
+        - reference fwd error:       4e-14
+    - 'solveU.m': ok
+
+    - final results:
+
+      'lower triangular solve': routines missing/not working
+
+      'upper triangular solve': routines missing/not working
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+
+part 3:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    ! 'linSolve.m': dependent routines missing/not working
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+
+    - final results:
+
+      'linear solve': routines missing/not working
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+
