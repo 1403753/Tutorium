@@ -18,14 +18,13 @@ part 1:
 
     - try 'plu.m' .. ok
       ! output matrix A has wrong dimension (dim(A) == 1) 
-    - try 'pluStats.m' .. ok
+    ! 'pluStats.m': required routines missing/not working
 
  -> INTERFACE CHECK: .. interface failure ..
 
 
  -> start routine evaluation ..
 
-    ! 'pluStats.m': dependent routines missing/not working
 
     - final results:
 

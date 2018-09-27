@@ -29,9 +29,9 @@ function [r, msg] = evalRoutinesPart1(obj)
     %%%%%%%%%%%%%%%%
     
     if obj.pluStats && ~obj.plu
-        str = ' PLUSTATS.M ! dependent routines missing/not working';
+        str = ' PLUSTATS.M ! required routines missing/not working';
         msg = [msg str];
-        obj.ctx(obj.partNr).addText('    ! ''pluStats.m'': dependent routines missing/not working\n'), r = 0; obj.pluStats = 0;
+        obj.ctx(obj.partNr).addText('    ! ''pluStats.m'': required routines missing/not working\n'), r = 0; obj.pluStats = 0;
     end
     
 		if obj.pluStats && obj.plu

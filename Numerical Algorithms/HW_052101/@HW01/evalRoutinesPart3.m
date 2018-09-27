@@ -7,9 +7,9 @@ function [r, msg] = evalRoutinesPart3(obj)
     %%%%%%%%%%%%%%%%
     
     if obj.linSolve && ~(obj.plu && obj.solveL && obj.solveU)
-        str = ' LINSOLVE.M ! dependent routines missing/not working';
+        str = ' LINSOLVE.M ! required routines missing/not working';
         msg = [msg str];
-        obj.ctx(obj.partNr).addText('    ! ''linSolve.m'': dependent routines missing/not working\n');
+        obj.ctx(obj.partNr).addText('    ! ''linSolve.m'': required routines missing/not working\n');
 				r = 0; obj.linSolve = 0;
     end
     
@@ -52,7 +52,7 @@ function [r, msg] = evalRoutinesPart3(obj)
         obj.ctx(obj.partNr).addText(['        - reference fwd error:       %1.e' '\n'], obj.linSolve_f);
         
     else
-        obj.ctx(obj.partNr).addText('\n      ''linear solve'': routines missing/not working\n');;
+        obj.ctx(obj.partNr).addText('\n      ''linear solve'': routines missing/not working\n');
         r = 0;
     end
     

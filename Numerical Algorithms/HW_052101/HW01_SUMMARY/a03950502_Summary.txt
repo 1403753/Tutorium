@@ -31,9 +31,9 @@ part 1:
     - final results:
 
       'lu-decomposition': 
-      - residual (R):                8e-15
-      - reference residual:          8e-15
-      - 'plu.m' runtime:             0.357269 s
+      - residual (R):                7e-15
+      - reference residual:          7e-15
+      - 'plu.m' runtime:             0.286771 s
 
  -> ROUTINE EVALUATION: ok
 
@@ -67,10 +67,10 @@ part 2:
       'lower triangular solve': routines missing/not working
 
       'upper triangular solve':
-      - residual (r):                4e-16
-        - reference residual:        4e-16
-      - fwd error (f):               6e-14
-        - reference fwd error:       6e-14
+      - residual (r):                5e-16
+        - reference residual:        5e-16
+      - fwd error (f):               1e-13
+        - reference fwd error:       1e-13
 
  -> ROUTINE EVALUATION:  .. evaluation failure ..
 

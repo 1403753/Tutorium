@@ -20,12 +20,12 @@ function [r, msg] = checkInterfacePart3(obj)
     %%%%%%%%%%%%%%%%
     
     if obj.linSolve && ~(obj.plu && obj.solveL && obj.solveU)
-        str = ' LINSOLVE.M ! dependent routines missing/not working';
+        str = ' LINSOLVE.M ! required routines missing/not working';
         msg = [msg str];
-        obj.ctx(obj.partNr).addText('    ! ''linSolve.m'': dependent routines missing/not working\n');
-				r = 0; obj.linSolve = 0;
+        obj.ctx(obj.partNr).addText('    ! ''linSolve.m'': required routines missing/not working\n');
+        r__ = 0; obj.linSolve = 0;
     end
-		
+    
     if obj.linSolve
         
         tx = 2*ones(n,1);

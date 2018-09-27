@@ -48,7 +48,7 @@ classdef HW01 < HWXX & handle
             hwxx = HWXX.CONST;
             % set hw specific parameters
             hwxx.CSVFILENAME    = 'HW01_SUMMARY.csv';
-            hwxx.CSVHEADER      = 'MatNr.;part 1;runtime;';
+            hwxx.CSVHEADER      = 'MatNr.;report;part 1;runtime;';
             hwxx.SUMMARYPOSTFIX = '_Summary.txt';
             hwxx.SUMMARYDOC     = 'HW01_SUMMARY.doc';
             % hwxx.INPUTFNAME    = '100x100_real.txt';

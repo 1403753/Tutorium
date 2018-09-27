@@ -35,9 +35,9 @@ part 1:
     - final results:
 
       'lu-decomposition statistics': 
-      - residual (R):                9e-15
-      - reference residual:          9e-15
-      - runtime:                     0.361501 s
+      - residual (R):                7e-15
+      - reference residual:          7e-15
+      - runtime:                     0.264460 s
 
  -> ROUTINE EVALUATION: ok
 
@@ -62,14 +62,13 @@ part 1:
 
     - try 'plu.m' .. ok
       ! output matrix A has wrong dimension (dim(A) == 1) 
-    - try 'pluStats.m' .. ok
+    ! 'pluStats.m': required routines missing/not working
 
  -> INTERFACE CHECK: .. interface failure ..
 
 
  -> start routine evaluation ..
 
-    ! 'pluStats.m': dependent routines missing/not working
 
     - final results:
 
@@ -145,9 +144,9 @@ part 1:
     - final results:
 
       'lu-decomposition statistics': 
-      - residual (R):                9e-15
-      - reference residual:          9e-15
-      - runtime:                     0.365539 s
+      - residual (R):                7e-15
+      - reference residual:          7e-15
+      - runtime:                     0.298808 s
 
  -> ROUTINE EVALUATION: ok
 

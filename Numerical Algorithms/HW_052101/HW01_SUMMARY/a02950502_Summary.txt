@@ -55,10 +55,10 @@ part 2:
  -> start routine evaluation ..
 
     ! 'solveL.m': dubious result
-      - 'solveL' output residual:    1e+01
-        - reference residual:        5e-16
-      - 'solveL' output fwd error:   3e+01
-        - reference fwd error:       4e-14
+      - 'solveL' output residual:    2e+01
+        - reference residual:        1e-15
+      - 'solveL' output fwd error:   6e+01
+        - reference fwd error:       1e-13
     - 'solveU.m': ok
 
     - final results:

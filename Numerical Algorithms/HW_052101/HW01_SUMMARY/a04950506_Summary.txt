@@ -60,16 +60,16 @@ part 2:
     - final results:
 
       'lower triangular solve':
-      - residual (r):                5e-16
-        - reference residual:        5e-16
-      - fwd error (f):               4e-14
-        - reference fwd error:       4e-14
+      - residual (r):                1e-15
+        - reference residual:        1e-15
+      - fwd error (f):               1e-13
+        - reference fwd error:       1e-13
 
       'upper triangular solve':
-      - residual (r):                4e-16
-        - reference residual:        4e-16
-      - fwd error (f):               6e-14
-        - reference fwd error:       6e-14
+      - residual (r):                5e-16
+        - reference residual:        5e-16
+      - fwd error (f):               1e-13
+        - reference fwd error:       1e-13
 
  -> ROUTINE EVALUATION: ok
 
