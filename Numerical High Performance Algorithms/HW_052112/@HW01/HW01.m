@@ -29,8 +29,10 @@ classdef HW01 < HWXX & handle
 				
         A          % plu.m, input
         n          % plu.m, input
-        X          % accuracy.m input
         plu_r      % result reference
+        rn         % relative residual norm, pluStats.m, output
+        foe        % relative forward error, pluStats.m, output
+        fae        % relative factorization error, pluStats.m, output
         submission % student submission object
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

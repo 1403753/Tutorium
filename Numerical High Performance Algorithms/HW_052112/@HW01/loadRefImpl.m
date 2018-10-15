@@ -15,10 +15,9 @@ function loadRefImpl(obj)
     [B, P] = ref_plu(obj.A, obj.n);
     L = tril(B, -1) + eye(obj.n);
     U = triu(B);
-    obj.X = transpose(P)*L*U;
-    
-    obj.plu_r = norm(obj.X - obj.A, 1) / norm(obj.A, 1);
-    
+    X = P'*L*U;
+    obj.plu_r = norm(X - obj.A, 1) / norm(obj.A, 1);
+    [obj.rn, obj.foe, obj.fae] = ref_pluStats(obj.A, obj.n);
     
     cd(oldDir);
 end

@@ -19,7 +19,7 @@ function [r, msg] = checkFilesPart1(obj)
     
     if ~r
         if ~isempty(dir('*.m')) && length(dir('*.m')) > 2
-            r = 2;
+            r = 2; %enough filetypes found, but wrong labels
         end
     end
 end

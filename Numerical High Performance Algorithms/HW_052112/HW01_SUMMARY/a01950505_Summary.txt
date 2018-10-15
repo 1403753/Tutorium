@@ -25,15 +25,19 @@ part 1:
  -> start routine evaluation ..
 
     - plu.m: ok
-    - pluStats.m: ok
+    ! pluStats.m: dubious results
+      - runtime:                     0.229161 s
+      - reference rn:                1e-02
+      - 'pluStats.m' rn:             1e+01
+      - reference foe:               1e-11
+      - 'pluStats.m' foe:             1e+01
+      - reference fae:               7e-15
+      - 'pluStats.m' fae:             7e-15
 
     - final results:
 
-      'lu-decomposition statistics': 
-      - residual (R):                7e-15
-      - reference residual:          7e-15
-      - runtime:                     0.264460 s
+      Couldn't evaluate 'lu-decomposition statistics' 
 
- -> ROUTINE EVALUATION: ok
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
 
 
