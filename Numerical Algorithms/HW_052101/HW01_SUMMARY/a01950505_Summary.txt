@@ -30,9 +30,9 @@ part 1:
     - final results:
 
       'lu-decomposition': 
-      - residual (R):                7e-15
-      - reference residual:          7e-15
-      - 'plu.m' runtime:             0.312857 s
+      - residual (R):                8e-15
+      - reference residual:          8e-15
+      - 'plu.m' runtime:             0.457804 s
 
  -> ROUTINE EVALUATION: ok
 
@@ -64,16 +64,16 @@ part 2:
     - final results:
 
       'lower triangular solve':
-      - residual (r):                1e-15
-        - reference residual:        1e-15
-      - fwd error (f):               1e-13
-        - reference fwd error:       1e-13
+      - residual (r):                5e-16
+        - reference residual:        5e-16
+      - fwd error (f):               4e-14
+        - reference fwd error:       4e-14
 
       'upper triangular solve':
       - residual (r):                5e-16
         - reference residual:        5e-16
-      - fwd error (f):               1e-13
-        - reference fwd error:       1e-13
+      - fwd error (f):               6e-14
+        - reference fwd error:       6e-14
 
  -> ROUTINE EVALUATION: ok
 
@@ -101,10 +101,10 @@ part 3:
     - final results:
 
       'linear solve':
-      - residual (r):                2e-15
-        - reference residual:        2e-15
-      - fwd error (f):               8e-12
-        - reference fwd error:       8e-12
+      - residual (r):                6e-16
+        - reference residual:        6e-16
+      - fwd error (f):               5e-12
+        - reference fwd error:       5e-12
 
  -> ROUTINE EVALUATION: ok
 

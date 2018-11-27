@@ -31,9 +31,9 @@ part 1:
     - final results:
 
       'lu-decomposition': 
-      - residual (R):                7e-15
-      - reference residual:          7e-15
-      - 'plu.m' runtime:             0.286771 s
+      - residual (R):                8e-15
+      - reference residual:          8e-15
+      - 'plu.m' runtime:             0.467116 s
 
  -> ROUTINE EVALUATION: ok
 
@@ -69,8 +69,8 @@ part 2:
       'upper triangular solve':
       - residual (r):                5e-16
         - reference residual:        5e-16
-      - fwd error (f):               1e-13
-        - reference fwd error:       1e-13
+      - fwd error (f):               6e-14
+        - reference fwd error:       6e-14
 
  -> ROUTINE EVALUATION:  .. evaluation failure ..
 
@@ -86,7 +86,7 @@ part 3:
 
  -> start interface check ..
 
-    ! 'linSolve.m': dependent routines missing/not working
+    ! 'linSolve.m': required routines missing/not working
 
  -> INTERFACE CHECK: .. interface failure ..
 
