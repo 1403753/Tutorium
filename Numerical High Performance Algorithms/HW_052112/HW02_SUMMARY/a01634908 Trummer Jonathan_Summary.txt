@@ -1,0 +1,36 @@
+======================================================================
+  NR. 6                    HOMEWORK SUMMARY          MatNr: a01634908 Trummer Jonathan
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'invit.m' .. ok
+    - try 'rqi.m' .. ok
+    - try 'rqi_k.m' .. ok
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+    - rqi_k.m: ok
+
+    - final results:
+
+      Couldn't evaluate results .. 
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+

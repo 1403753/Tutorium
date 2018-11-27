@@ -1,0 +1,299 @@
+
+*-**-*-**-*-**-*-**-*-**-
+  TOTAL SUBMISSIONS: 6
+*-**-*-**-*-**-*-**-*-**-
+
+======================================================================
+  NR. 1                    HOMEWORK SUMMARY          MatNr: a01006529
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'uplu.m' .. ok
+    - try 'pluStats.m' .. ok
+    - try 'upluStats.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - pluStats.m: ok
+    - uplu.m: ok
+    - upluStats.m: ok
+
+    - final results:
+
+      'lu-decomposition statistics': 
+      - runtime plu:                 611.384390 s
+      - runtime uplu:                150.409987 s
+      - reference rn:                3e-14
+      - 'pluStats.m' rn:             6e-16
+      - 'upluStats.m' rn:            2e-14
+      - reference foe:               2e-10
+      - 'pluStats.m' foe:             7e-12
+      - 'upluStats.m' foe:            1e-10
+      - reference fae:               8e-15
+      - 'pluStats.m' fae:             8e-15
+      - 'upluStats.m' fae:            1e-12
+
+ -> ROUTINE EVALUATION: ok
+
+
+======================================================================
+  NR. 2                    HOMEWORK SUMMARY          MatNr: a01263740
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+    ! 'pluStats.m' missing
+
+ -> FILE CHECK: .. file(s) missing, sufficient amount of files (wrong label?) .. 
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'uplu.m' .. ok
+    - try 'upluStats.m' .. ok
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - uplu.m: ok
+    - upluStats.m: ok
+
+    - final results:
+
+      Couldn't evaluate 'lu-decomposition statistics' 
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+
+======================================================================
+  NR. 3                    HOMEWORK SUMMARY          MatNr: a01304613
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'uplu.m' .. ok
+    - try 'pluStats.m' .. ok
+    - try 'upluStats.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - pluStats.m: ok
+    - uplu.m: ok
+    - upluStats.m: ok
+
+    - final results:
+
+      'lu-decomposition statistics': 
+      - runtime plu:                 2.883910 s
+      - runtime uplu:                81.211980 s
+      - reference rn:                3e-14
+      - 'pluStats.m' rn:             6e-16
+      - 'upluStats.m' rn:            6e-16
+      - reference foe:               2e-10
+      - 'pluStats.m' foe:             5e-12
+      - 'upluStats.m' foe:            6e-12
+      - reference fae:               8e-15
+      - 'pluStats.m' fae:             8e-15
+      - 'upluStats.m' fae:            8e-15
+
+ -> ROUTINE EVALUATION: ok
+
+
+======================================================================
+  NR. 4                    HOMEWORK SUMMARY          MatNr: a01306379
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'uplu.m' .. ok
+    - try 'pluStats.m' .. ok
+    - try 'upluStats.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - pluStats.m: ok
+    - uplu.m: ok
+    - upluStats.m: ok
+
+    - final results:
+
+      'lu-decomposition statistics': 
+      - runtime plu:                 5.812500 s
+      - runtime uplu:                197.390625 s
+      - reference rn:                3e-14
+      - 'pluStats.m' rn:             7e-16
+      - 'upluStats.m' rn:            6e-16
+      - reference foe:               2e-10
+      - 'pluStats.m' foe:             1e-12
+      - 'upluStats.m' foe:            1e-12
+      - reference fae:               8e-15
+      - 'pluStats.m' fae:             1e-14
+      - 'upluStats.m' fae:            8e-15
+
+ -> ROUTINE EVALUATION: ok
+
+
+======================================================================
+  NR. 5                    HOMEWORK SUMMARY          MatNr: a01306879
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'uplu.m' .. ok
+    - try 'pluStats.m' .. ok
+    - try 'upluStats.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - pluStats.m: ok
+    - uplu.m: ok
+    - upluStats.m: ok
+
+    - final results:
+
+      'lu-decomposition statistics': 
+      - runtime plu:                 4.484723 s
+      - runtime uplu:                81.195478 s
+      - reference rn:                3e-14
+      - 'pluStats.m' rn:             6e-16
+      - 'upluStats.m' rn:            6e-16
+      - reference foe:               2e-10
+      - 'pluStats.m' foe:             1e-12
+      - 'upluStats.m' foe:            1e-12
+      - reference fae:               8e-15
+      - 'pluStats.m' fae:             8e-15
+      - 'upluStats.m' fae:            8e-15
+
+ -> ROUTINE EVALUATION: ok
+
+
+======================================================================
+  NR. 6                    HOMEWORK SUMMARY          MatNr: a01634908
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'uplu.m' .. ok
+    - try 'pluStats.m' .. ok
+    - try 'upluStats.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - pluStats.m: ok
+    - uplu.m: ok
+    - upluStats.m: ok
+
+    - final results:
+
+      'lu-decomposition statistics': 
+      - runtime plu:                 21.649887 s
+      - runtime uplu:                124.346100 s
+      - reference rn:                3e-14
+      - 'pluStats.m' rn:             8e-14
+      - 'upluStats.m' rn:            6e-16
+      - reference foe:               2e-10
+      - 'pluStats.m' foe:             5e-10
+      - 'upluStats.m' foe:            6e-12
+      - reference fae:               8e-15
+      - 'pluStats.m' fae:             7e-12
+      - 'upluStats.m' fae:            8e-15
+
+ -> ROUTINE EVALUATION: ok
+
+

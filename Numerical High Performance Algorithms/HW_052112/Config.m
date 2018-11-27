@@ -35,7 +35,7 @@ classdef Config < handle
                 obj.ROOT = pwd;
             end
             obj.SUBMDIR     = strcat(obj.ROOT, '\Abgaben');
-            allFiles        = dir(fullfile(obj.SUBMDIR, 'a*'));
+            allFiles        = dir(fullfile(obj.SUBMDIR, "a*"));
             obj.MATNRDIRS   = allFiles([allFiles.isdir]);
             obj.TESTSCRIPTS = 0; % default, not working a.t.m.
             obj.VERBOSE     = 0; % default

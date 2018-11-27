@@ -1,0 +1,40 @@
+======================================================================
+  NR. 5                    HOMEWORK SUMMARY          MatNr: a01306879 Pöltner Stephan
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'invit.m' .. ok
+    - try 'rqi.m' .. ok
+    - try 'rqi_k.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - invit.m: ok
+    ! rqi.m: dubious result
+      - relative error in lambda:    1e-07
+      - absolute error in evec:      5e-15
+    - rqi_k.m: ok
+
+    - final results:
+
+      Couldn't evaluate results .. 
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+

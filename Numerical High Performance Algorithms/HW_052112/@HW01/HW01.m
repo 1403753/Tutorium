@@ -27,20 +27,25 @@ classdef HW01 < HWXX & handle
         %  reference implementation values  %
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 				
-        A          % plu.m, input
-        n          % plu.m, input
-        plu_r      % result reference
-        rn         % relative residual norm, pluStats.m, output
-        foe        % relative forward error, pluStats.m, output
-        fae        % relative factorization error, pluStats.m, output
-        submission % student submission object
+        A             % plu.m, input
+        n             % plu.m, input
+        plu_r         % reference residual plu.m/uplu.m
+        rn            % relative residual norm, pluStats.m, output
+        foe           % relative forward error, pluStats.m, output
+        fae           % relative factorization error, pluStats.m, output
+        urn           % relative residual norm, upluStats.m, output
+        ufoe          % relative forward error, upluStats.m, output
+        ufae          % relative factorization error, upluStats.m, output
+        submission    % student submission object
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         %  routine states (1 == ok, 0 == error)  %
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         
         plu
-				pluStats
+				uplu
+        pluStats
+        upluStats
     end
     
     methods
@@ -70,12 +75,11 @@ classdef HW01 < HWXX & handle
             end
             
             obj.ctx = ctx;
-            
             % submission = Submission.empty(length(hwxx.MATNRDIRS), 0); % -> object preallocation not implemented in Octave
             for i = 1:length(hwxx.MATNRDIRS)
                 submission(i) = Submission(hwxx.MATNRDIRS(i).name);
             end
-            
+                        
             obj.submission = submission;
             
         end
@@ -106,13 +110,25 @@ classdef HW01 < HWXX & handle
         function mergeSummaries(obj)
             mergeSummaries@HWXX(obj);
             obj.enterSummaryDir();
-            [~, idx] = sort([obj.submission.runtime]);
+            [~, idx] = sort([obj.submission.observed_t]);
             fileID = fopen('RANKINGS.csv', 'w');
-            fprintf(fileID, 'Nr.;MatNr.;Runtime (sec.);n == %i;\n', obj.n);
+            fprintf(fileID, 'Nr.;MatNr.;observed plu time (sec.);pluStats time (sec.);observed uplu time (sec.); upluStats time (sec.);res. norm ;ures. norm; reference res. norm;forw. err.;uforw. err.;reference forw. err.;fact. err.;ufact. err.;reference fact. err.;n == %i\n', obj.n);
             for i = 1:length(idx)
-                fprintf(fileID, '%i;%s;%f;\n', i,...
+                fprintf(fileID, '%i;%s;%f;%f;%f;%f;%1.0e;%1.0e;%1.0e;%1.0e;%1.0e;%1.0e;%1.0e;%1.0e;%1.0e;\n', i,...
                     obj.submission(idx(i)).matNr, ...
-                    obj.submission(idx(i)).runtime);
+                    obj.submission(idx(i)).observed_t, ...
+                    obj.submission(idx(i)).t, ...
+                    obj.submission(idx(i)).observed_ut, ...
+										obj.submission(idx(i)).ut, ...
+                    obj.submission(idx(i)).rn, ...
+                    obj.submission(idx(i)).urn, ...
+										obj.rn, ...
+                    obj.submission(idx(i)).foe, ...
+                    obj.submission(idx(i)).ufoe, ...
+										obj.foe, ...
+                    obj.submission(idx(i)).fae, ...
+                    obj.submission(idx(i)).ufae, ...
+										obj.fae);
             end
             fclose(fileID);
             obj.enterRootDir();
@@ -120,7 +136,9 @@ classdef HW01 < HWXX & handle
 				
         function revalidateRoutineStates(obj)
             obj.plu = 1;
+            obj.uplu = 1;
             obj.pluStats = 1;
+            obj.upluStats = 1;
         end
 				
     end

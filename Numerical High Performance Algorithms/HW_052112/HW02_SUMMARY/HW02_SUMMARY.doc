@@ -1,0 +1,231 @@
+
+*-**-*-**-*-**-*-**-*-**-
+  TOTAL SUBMISSIONS: 6
+*-**-*-**-*-**-*-**-*-**-
+
+======================================================================
+  NR. 1                    HOMEWORK SUMMARY          MatNr: a01006529 Mitsch Raphael
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'invit.m' .. ok
+    - try 'rqi.m' .. ok
+    - try 'rqi_k.m' .. ok
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+
+    - final results:
+
+      Couldn't evaluate results .. 
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+
+======================================================================
+  NR. 2                    HOMEWORK SUMMARY          MatNr: a01263740 Böhm Dominic
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'invit.m' .. ok
+    - try 'rqi.m' .. ok
+    - try 'rqi_k.m' .. ok
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+
+    - final results:
+
+      Couldn't evaluate results .. 
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+
+======================================================================
+  NR. 3                    HOMEWORK SUMMARY          MatNr: a01304613 Mayer Viktoria
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'invit.m' .. ok
+    - try 'rqi.m' .. ok
+    - try 'rqi_k.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - invit.m: ok
+    - rqi.m: ok
+    - rqi_k.m: ok
+
+    - final results:
+      - runtime invit:                 0.045712 s
+      - runtime rqi:                   0.002951 s
+      - runtime rqi_k:                 0.003490 s
+      - invit rel. error in lambda:    2e-16
+      - invit abs. error in evec:      0e+00
+      - rqi rel. error in lambda:      3e-14
+      - rqi abs. error in evec:        5e-15
+      - rqi_k rel. error in lambda:    1e-13
+      - rqi_k abs. error in evec:      8e-14
+
+ -> ROUTINE EVALUATION: ok
+
+
+======================================================================
+  NR. 4                    HOMEWORK SUMMARY          MatNr: a01306379 Grilnberger Verena
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'invit.m' .. ok
+    - try 'rqi.m' .. ok
+    - try 'rqi_k.m' .. ok
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+
+    - final results:
+
+      Couldn't evaluate results .. 
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+
+======================================================================
+  NR. 5                    HOMEWORK SUMMARY          MatNr: a01306879 Pöltner Stephan
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'invit.m' .. ok
+    - try 'rqi.m' .. ok
+    - try 'rqi_k.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - invit.m: ok
+    ! rqi.m: dubious result
+      - relative error in lambda:    1e-07
+      - absolute error in evec:      5e-15
+    - rqi_k.m: ok
+
+    - final results:
+
+      Couldn't evaluate results .. 
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+
+======================================================================
+  NR. 6                    HOMEWORK SUMMARY          MatNr: a01634908 Trummer Jonathan
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'invit.m' .. ok
+    - try 'rqi.m' .. ok
+    - try 'rqi_k.m' .. ok
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+    - rqi_k.m: ok
+
+    - final results:
+
+      Couldn't evaluate results .. 
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+

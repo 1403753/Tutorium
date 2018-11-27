@@ -1,0 +1,51 @@
+======================================================================
+  NR. 6                    HOMEWORK SUMMARY          MatNr: a01634908
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'uplu.m' .. ok
+    - try 'pluStats.m' .. ok
+    - try 'upluStats.m' .. ok
+
+ -> INTERFACE CHECK: ok
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+    - pluStats.m: ok
+    - uplu.m: ok
+    - upluStats.m: ok
+
+    - final results:
+
+      'lu-decomposition statistics': 
+      - runtime plu:                 14.756310 s
+      - runtime uplu:                107.667679 s
+      - reference rn:                3e-14
+      - 'pluStats.m' rn:             2e-13
+      - 'upluStats.m' rn:            6e-16
+      - reference foe:               7e-11
+      - 'pluStats.m' foe:             4e-10
+      - 'upluStats.m' foe:            5e-12
+      - reference fae:               9e-15
+      - 'pluStats.m' fae:             3e-11
+      - 'upluStats.m' fae:            9e-15
+
+ -> ROUTINE EVALUATION: ok
+
+

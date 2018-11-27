@@ -1,0 +1,35 @@
+======================================================================
+  NR. 1                    HOMEWORK SUMMARY          MatNr: a01006529 Mitsch Raphael
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+
+ -> FILE CHECK: ok
+
+
+ -> start interface check ..
+
+    - try 'invit.m' .. ok
+    - try 'rqi.m' .. ok
+    - try 'rqi_k.m' .. ok
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+
+    - final results:
+
+      Couldn't evaluate results .. 
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+

@@ -1,0 +1,48 @@
+======================================================================
+  NR. 2                    HOMEWORK SUMMARY          MatNr: a01263740
+======================================================================
+
+ -> REPORT CHECK: ok
+----------------------------------------------------------------------
+
+part 1:
+
+
+ -> start file check ..
+
+    ! 'pluStats.m' missing
+
+ -> FILE CHECK: .. file(s) missing, sufficient amount of files (wrong label?) .. 
+
+
+ -> start interface check ..
+
+    - try 'plu.m' .. ok
+    - try 'uplu.m' .. failed
+
+ o~~~~~~~~~~~~~ start err msg ~~~~~~~~~~~~~o
+ parse error near line 15 of file C:/Users/Robert/Desktop/Tutorium/Numerical High Performance Algorithms/HW_052112/Abgaben/a01263740/uplu.m
+
+  syntax error
+
+>>> if
+      ^
+
+ o~~~~~~~~~~~~~~ end err msg ~~~~~~~~~~~~~~o
+
+    ! 'upluStats.m': required routines missing/not working
+
+ -> INTERFACE CHECK: .. interface failure ..
+
+
+ -> start routine evaluation ..
+
+    - plu.m: ok
+
+    - final results:
+
+      Couldn't evaluate 'lu-decomposition statistics' 
+
+ -> ROUTINE EVALUATION:  .. evaluation failure ..
+
+

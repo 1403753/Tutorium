@@ -1,0 +1,7 @@
+Nr.;MatNr.;invit time (sec.);rqi time (sec.);rqi_k time (sec.);rel. err. eval (invit);rel. err. eval (rqi);rel. err. eval (rqi_k); abs. err. evec (invit); abs. err. evec (rqi); abs. err. evec (rqi_k);n == 5
+1;a01306879 Pöltner Stephan;0.042784;0.001514;0.001661;5e-16;1e-07;5e-11;2e-16;5e-15;6e-11;
+2;a01304613 Mayer Viktoria;0.045712;0.002951;0.003490;2e-16;3e-14;1e-13;0e+00;5e-15;8e-14;
+3;a01006529 Mitsch Raphael;Inf;Inf;Inf;Inf;Inf;Inf;Inf;Inf;Inf;
+4;a01263740 Böhm Dominic;Inf;Inf;Inf;Inf;Inf;Inf;Inf;Inf;Inf;
+5;a01306379 Grilnberger Verena;Inf;Inf;Inf;Inf;Inf;Inf;Inf;Inf;Inf;
+6;a01634908 Trummer Jonathan;Inf;Inf;0.003642;Inf;Inf;3e-14;Inf;Inf;2e-15;

@@ -21,8 +21,10 @@
 % add root to search path
 addpath(pwd);
 
-% set HW-object
-handler = HW01();
+% manually set HW-path and HW-object
+addpath([pwd '\@HW02']);
+handler = HW02();
+
 
 % get constants
 const = handler.CONST;
@@ -31,7 +33,7 @@ const = handler.CONST;
 set(0,'DefaultFigureVisible','off');
 
 % verbose-output
-const.VERBOSE = 0;
+const.VERBOSE = 1;
 
 % test scripts as well
 % const.TESTSCRIPTS = 0; % not working a.t.m.
@@ -47,11 +49,9 @@ handler.createSummaryCSV();
 %%%%%%%%%%%%%
 
 for submissionNr=1:length(const.MATNRDIRS)
-    
     % set student project path
     handler.projDir = fullfile(const.SUBMDIR, ...
         const.MATNRDIRS(submissionNr).name);
-    
     % add student-MatNr(submissionNr) to CSV file
     handler.addCSV('\n%s;', const.MATNRDIRS(submissionNr).name);
     

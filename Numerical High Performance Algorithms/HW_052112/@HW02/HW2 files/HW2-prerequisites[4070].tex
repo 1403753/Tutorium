@@ -1,0 +1,121 @@
+%\documentclass{article}
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{xcolor}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Note Block - source: https://tex.stackexchange.com/questions/94464/note-environment-with-mdframed
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[framemethod=default]{mdframed}
+
+%\global\mdfdefinestyle{exampledefault}{%
+%linecolor=lightgray,linewidth=1pt,%
+%leftmargin=0cm,rightmargin=0cm,
+%}
+
+\newcommand{\fl}{\text{fl}}
+\newcommand{\op}{\text{ op }}
+
+\newenvironment{mymdframed}[1]{%
+\mdfsetup{%
+frametitle={\colorbox{white}{\,#1\,}},
+frametitleaboveskip=-\ht\strutbox,
+frametitlealignment=\raggedright
+}%
+\begin{mdframed}[style=exampledefault]
+}{\end{mdframed}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Submission Guidelines for Homework 2}
+\subtitle{VU Numerical High Performance Algorithms, WiSe 2018}
+\date{\underline{\emph{due date: 19.11.2018, 18:00}}}
+
+\begin{document}
+
+\maketitle
+
+%        \begin{mymdframed}{Submission Guidelines}
+%            \begin{itemize}
+%                \item Please submit an anonymized version of your report without your name or your Matrikelnummer appearing in the document. 
+%            \end{itemize}
+%        \end{mymdframed}
+
+%\section*{Prerequisites}
+\begin{enumerate}
+	\item Basics:
+	\begin{itemize}
+		\item Octave users: please use \textit{version 4.4} or higher
+		\item Matlab users: please use \textit{version 9.2 (R2017a)} or higher 
+		\item Your submission will be evaluated. Please indicate the used environment (Matlab/Octave) and version in your report.
+		\item No global variables allowed.
+		\item Pay attention to the interface definitions (i.e., use the specified terms. In/output parameters must be in the specified order.)
+		\item Your routines should always check the number and types of input arguments.
+		\item Do not plot results in predefined routines. Plot results in scripts or self defined routines only.
+		\item You can either use your own implementation of the lu-factorization from HW1 or the integrated routines provided by Matlab/Octave.
+		\item Measure runtimes of routines only (i.e. do not measure the time needed for memory allocation and initializations). Measurements
+have to be done outside the specified routines.
+	\end{itemize}
+
+	\item Interface:
+	\begin{itemize}
+		\item Implement the following interface for the \textit{inverse iteration}:
+		\begin{eqnarray*}
+			[lambda, v, it, erreval, errres] = invit(n, A, x_0, sigma, eps, maxit, l)
+		\end{eqnarray*}
+		\item Implement the following interface for the \textit{standard Rayleigh quotient iteration}:
+		\begin{eqnarray*}
+			[lambda, v, it, erreval, errres] = rqi(n, A, x_0, sigma, eps, maxit, l)				
+		\end{eqnarray*}
+
+\item Implement the following interface for the $k^{th}$ iteration variant of \textit{RQI}:
+		\begin{eqnarray*}
+			[lambda, v, it, erreval, errres] = rqi\_k(n, A, x_0, sigma, eps, maxit, l, k)			
+		\end{eqnarray*}	
+	
+		\begin{itemize}
+			\item[*] Description of input parameters: 
+			\begin{itemize}
+				\item[-] $n$: dimension (scalar)
+				\item[-] $A$: $n \times n$ matrix
+				\item[-] $x_0$: starting vector of size $n$
+				\item[-] $sigma$: shift/eigenvalue approximation (scalar)
+				\item[-] $eps$: error tolerance (scalar)
+				\item[-] $maxit$: the maximum number of iterations (scalar)
+				\item[-] $l$ : reference (true) dominant eigenvalue (scalar)
+				\item[-] $k$: a scalar defining the number of $k-1$ iterations before the shift is updated
+			\end{itemize}
+			\item[*] Description of output parameters: 
+			\begin{itemize}
+				\item[-] $lambda$: the dominant eigenvalue (scalar)
+				\item[-] $v$: the dominant eigenvector of size $n$
+				\item[-] $it$: the iteration-number at termination (scalar)
+				\item[-] $erreval$: a vector of size $it$ containing the history of relative eigenvalue approximation errors
+				\item[-] $errres$: a vector of size $it$ containing the history of relative residuals
+			\end{itemize}
+		\end{itemize}
+		\vspace{0.2cm}
+		
+		\item Write a script \textit{assignment2.m} to call your routines and plot your results.
+	\end{itemize}
+
+	\item Submission:
+	\begin{itemize}		
+		\item  Upload a single zip archive with all your source code files and your report (as a single
+			PDF file named \textit{report.pdf} with all plots and discussions of results) on the course page in Moodle.
+		\item Name your archive \texttt{a$<$matriculation\_number$>$.zip} (e.g. \textit{a01234567.zip})
+		\item Directories in the archive are not allowed.
+		\item A complete submission should include the following files:
+		\begin{enumerate}
+		\item Routine(s): \textit{invit.m, rqi.m, rqi\_k.m}, self defined routines (optional)
+		\item Script(s): \textit{assignment2.m}
+		\item Documentation: \textit{report.pdf}
+		\end{enumerate}
+		
+		\end{itemize}
+	\end{enumerate}
+\end{document}
