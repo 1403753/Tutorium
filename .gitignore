@@ -21,7 +21,9 @@ sccprj/
 # Matlab code generation folders
 codegen/
 
-Abgaben/
+Abgaben*/
+
+T.txt
 
 # Simulink autosave extension
 *.autosave
