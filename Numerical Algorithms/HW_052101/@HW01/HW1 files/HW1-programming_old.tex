@@ -32,17 +32,17 @@ frametitlealignment=\raggedright
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{Homework Sheet 1}
-\subtitle{VU Numerical Algorithms, SoSe 2018}
-\date{\underline{\emph{due date: 23.4.2018, 18:00}}}
+\subtitle{VU Numerical Algorithms, SoSe 2019}
+\date{\underline{\emph{due date: 23.4.2019, 18:00}}}
 
 \begin{document}
 
 \maketitle
 
 %        \begin{mymdframed}{Submission Guidelines}
-            \begin{itemize}
-                \item Please submit an anonymized version of your report without your name or your Matrikelnummer appearing in the document. 
-            \end{itemize}
+%            \begin{itemize}
+%                \item Please submit an anonymized version of your report without your name or your Matrikelnummer appearing in the document. 
+%            \end{itemize}
 %        \end{mymdframed}
 
 
@@ -85,20 +85,11 @@ frametitlealignment=\raggedright
     
     \subsubsection*{Detailed remarks:}
     \begin{enumerate}
-        \item Write a routine $plu.m$ of the following form: 
-        	\begin{align*}        	 
-        		\texttt{[A, P] = plu(A, n)}
-			\end{align*}
-        	\begin{itemize}
-            	\item Input: $n \times n$ matrix $A, n$
-            	\item Output: $n \times n$ matrices $L$ and $U$ stored in the array $A$ ($A=LU$) and the permutation matrix $P$.
-        	\end{itemize}           
-    
         \item \textit{Accuracy}: Verify the correctness of your $LU$ factorization by evaluating the relative residual
         \begin{align*}
-            R = \frac{\|P^TLU - A\|_{1}}{\|A\|_{1}}
+            r := \frac{\|P^TLU - A\|_{1}}{\|A\|_{1}}
         \end{align*}
-        where $\|\cdot\|_{1}$ is the maximum absolute column sum of a matrix:
+        where $\|\cdot\|_{1}$ is the maximum absolute column sum of some matrix $M$:
         \begin{align*}
             \|M\|_{1} = \underset{j = 1, \dots, n}{max} \; \sum_{i=1}^{n} |M_{ij}|
         \end{align*}
@@ -109,14 +100,14 @@ Write a routine $accuracy.m$ of the following form:
         \end{align*}
 		\begin{itemize}
             	\item Input: $n \times n$ matrices $X$ and $Y$. In this case $X = P^TLU$ and $Y = A$.
-            	\item Output: scalar $z$ ($z = R$).
+            	\item Output: scalar $z$ ($z = r$).
         \end{itemize}
 		
 		\textit{(For Parts II and III, this routine must also work for vectors $X$ and $Y$ of size $n$.)}\\
 		
 		
 
-        Plot these residuals $R$ for all problem sizes you experimented with.
+        Plot these residuals $r$ for all problem sizes you experimented with.
         \emph{When plotting residuals, always use a \textbf{logarithmic scale} along the \textbf{y-axis}!}
  
         
