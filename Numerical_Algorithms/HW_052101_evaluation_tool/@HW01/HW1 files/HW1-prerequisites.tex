@@ -1,0 +1,160 @@
+%\documentclass{article}
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[bottom]{footmisc}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{xcolor}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Note Block - source: https://tex.stackexchange.com/questions/94464/note-environment-with-mdframed
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[framemethod=default]{mdframed}
+
+%\global\mdfdefinestyle{exampledefault}{%
+%linecolor=lightgray,linewidth=1pt,%
+%leftmargin=0cm,rightmargin=0cm,
+%}
+
+\newcommand{\fl}{\text{fl}}
+\newcommand{\op}{\text{ op }}
+
+\newenvironment{mymdframed}[1]{%
+\mdfsetup{%
+frametitle={\colorbox{white}{\,#1\,}},
+frametitleaboveskip=-\ht\strutbox,
+frametitlealignment=\raggedright
+}%
+\begin{mdframed}[style=exampledefault]
+}{\end{mdframed}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Submission Guidelines for Homework 1}
+\subtitle{VU Numerical Algorithms, SoSe 2019}
+\date{\underline{\emph{due date: 23.4.2019, 18:00}}}
+
+\begin{document}
+\maketitle
+
+%        \begin{mymdframed}{Submission Guidelines}
+%            \begin{itemize}
+%                \item Please submit an anonymized version of your report without your name or your Matrikelnummer appearing in the document.
+%            \end{itemize}
+%        \end{mymdframed}
+\section*{Prerequisites}
+\begin{enumerate}
+	\item Basics:
+	\begin{itemize}
+		\item Please use Octave\footnote{Octave download page: \url{https://www.gnu.org/software/octave/download.html}} \textit{version 4.4} or higher and indicate the Octave version in your report. Your submission will be evaluated.
+		\item Do not import additional packages and do not use global variables.
+		\item Pay attention to the interface definitions, i.e., use the specified terms. In/output parameters must be in the specified order.
+		\item Your routines should always check the number and types of input arguments.
+		\item Do not plot results in predefined routines! Plot results in scripts or self defined routines only.
+		\item Do not exploit any special structure in the input data. Your routines must be generic and have to work for all $n > 1$.
+		\item Do not use any existing code which you did not write yourself!
+		\item You can define your own routines in order to write modular code but please stay consistent with the predefined interface.
+	\end{itemize}
+	
+	\item Interface:
+	\begin{itemize}
+		\item Mandatory for \textbf{all Parts}:
+			\begin{enumerate}
+        		\item Write a script \textit{assignment1.m} to test your routines and plot your results.\\
+				\item Create a file $accuracy.m$ of the following form:
+     			\begin{align*}
+            		\texttt{[z] = accuracy(X, Y)}
+        		\end{align*}
+				\begin{itemize}
+            		\item[-] Input: $X$ and $Y$ are either both $n \times n$ matrices or both vectors of size $n$.
+            		\item[-] Output: scalar $z$, with
+            		\begin{equation*}
+	         			z := \frac{||X - Y||_1}{||Y||_1}.
+            		\end{equation*}
+        		\end{itemize}
+        		\textbf{Remark}: Use this routine to verify the correctness of your $LU$ factorization in \textbf{Part I} and to compute the \textit{relative residual} and \textit{relative forward error} in \textbf{Part II} resp. \textbf{Part III}.\\
+		\end{enumerate}
+	
+		\item Mandatory for \textbf{Part I}:
+			\begin{enumerate}
+				\item Create a file $plu.m$ for the $LU$ factorization with partial pivoting:
+        		\begin{align*}        	 
+        			\texttt{[A, P] = plu(A, n)}
+				\end{align*}
+        		\begin{itemize}
+            		\item[-] Input: $n \times n$ matrix $A, n$
+            		\item[-] Output: $n \times n$ matrices $L$ and $U$ stored in the array $A$ ($A=P^TLU$) and the permutation matrix $P$.\\
+        		\end{itemize}
+        	\end{enumerate}
+
+		\item Mandatory for \textbf{Part II}:
+			\begin{enumerate}
+				\item Create two files \textit{solveL.m} / \textit{solveU.m} for solving a lower / upper triangular system:
+            	\begin{align*}
+            		\texttt{[x] = solveL(B, b, n)}\\
+					\texttt{[x] = solveU(B, b, n)}
+				\end{align*}
+        		\begin{itemize}
+            		\item[-] Input: $n \times n$ matrix $B$, the right hand side vector $b$ of size $n$, $n$
+            		\item[-] Output: the solution vector $x$.
+        		\end{itemize}
+		\textbf{Remark}: The input matrix $B$ has special structure $B = L + U - I$, where $L$ (with fixed ones in the diagonal) and $U$ are lower resp. upper triangular matrices and $I$ is the Identity.\\
+			\end{enumerate}
+
+		\item Mandatory for \textbf{Part III}:
+		 \begin{enumerate}
+		 	\item Create a file \textit{linSolve.m} for solving a linear system:
+		 	\begin{align*}
+				\texttt{[x] = linSolve(A, b, n)}
+			\end{align*}
+			\begin{itemize}
+				\item[-] Input: $n \times n$ nonsingular matrix $A$, the right hand side vector $b$ of size $n$, $n$.
+            	\item[-] Output: the solution vector $x$.        	
+        	\end{itemize}
+\textbf{Remark}: This routine must incorporate $\textbf{plu.m}$, $\textbf{solveL.m}$ and $\textbf{solveU.m}$ from previous Parts!\\
+		\end{enumerate}
+	\end{itemize}
+
+	\item Submission:	
+	\begin{itemize}		
+		\item  Upload a single zip archive with all your source code files and your report (as a single
+			PDF file named \textit{report.pdf} with all plots and discussions of results) on the course page in Moodle.
+		\item Name your archive \texttt{a$<$matriculation number$>$\_$<$last name$>$.zip}\\
+		(e.g. \textit{a01234567\_mustermann.zip})
+		\item Directories in the archive are not allowed.
+		\item A complete submission should include the following files:
+		\begin{enumerate}
+		\item Routines: \textit{accuracy.m, linSolve.m, plu.m, solveL.m, solveU.m}, self defined routines (optional)
+		\item Script: \textit{assignment1.m}
+		\item Documentation: \textit{report.pdf}
+		\end{enumerate}
+		
+		\end{itemize}
+	\end{enumerate}
+
+\section*{Octave cheat sheet}
+Below is a list of recommendations that might help with your implementation:
+\begin{itemize}
+
+\item You should at least be aware of the following routines provided by Octave:\\
+
+$validateattributes,\,nargin,\,norm,\,tril,\,triu,\,semilogy,\,\ldots$\\
+
+All Octave routines are described here:\\
+\url{https://octave.sourceforge.io/list_functions.php}
+
+\item We recommend vectorization to simplify and optimize your code (i.e., eliminate for loops whenever possible):\vspace{.3cm}\\
+\url{https://octave.org/doc/v4.0.1/Basic-Vectorization.html}
+
+\item For efficiency, the LU factorization algorithm usually operates on a permutation vector (instead of a whole matrix) during the factorization process and creates the permutation matrix at the very end. You might consider using a permutation vector as well (although, this is not mandatory). Creating permutation matrices is explained here:\vspace{.3cm}\\
+\url{https://octave.org/doc/v4.4.1/Creating-Permutation-Matrices.html}
+
+
+\end{itemize}
+\end{document}
